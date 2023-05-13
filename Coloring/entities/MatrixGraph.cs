@@ -277,7 +277,7 @@
                 pondered = true;
             }
             int amountOfRows = int.Parse(line_one[0]);
-            Console.WriteLine("vertexes " + amountOfRows.ToString());
+
             MatrixGraph ret = new MatrixGraph(directed, pondered);
             for (int i = 0; i < amountOfRows; i++)
             {
@@ -351,9 +351,6 @@
 
             count /= 2;
 
-            Console.WriteLine(count);
-            Console.WriteLine(((c * this.graph.Count) - a));
-
             return count <= ((c * this.graph.Count) - a);
         }
 
@@ -380,8 +377,7 @@
             count /= 2;
 
             int f = 2 - this.graph.Count + count;
-            Console.WriteLine(f);
-            Console.WriteLine((2 * count) / 3);
+
             return f <= (2 * count) / 3;
         }
     }
